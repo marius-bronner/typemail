@@ -1,3 +1,7 @@
+/.vscode/
 /src/
 /tsconfig.json
 /typemail.png
+/node_modules/
+/npm-debug.log
+/npm-error.log
