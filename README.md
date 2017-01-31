@@ -1,4 +1,4 @@
-![TypeMail](typemail.png)
+![TypeMail](https://raw.githubusercontent.com/marius-bronner/typemail/master/typemail.png)
 
 You've got mail! -- ok, actually you SENT the mail, so I guess some other person has got mail! :D
 
