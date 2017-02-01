@@ -27,6 +27,7 @@
     "reparse": "^0.1.2"
   },
   "devDependencies": {
-    "@types/node": "^7.0.4"
+    "@types/node": "^7.0.4",
+    "typescript": "^2.1.5"
   }
 }
