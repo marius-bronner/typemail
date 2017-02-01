@@ -20,21 +20,22 @@ export class MailClient {
     this._opts.domain = this._opts.domain || OS.hostname();
   }
 
-  public send(message: Message) {
+  public async send(message: Message): Promise<void> {
     let client = SMTP.createClient(this._opts);
 
-    client.on('error', function (err) {
-      client.end();
-      throw err;
-    });
-
-    return client.mail(message.sender, message.recipients)
+    return new Promise<void>((res, rej) => {
+      client.on('error', function(err) {
+        client.end();
+        rej(err);
+      });
+      client.mail(message.sender, message.recipients)
       .on('ready', function () {
         this.on('end', function () {
           client.quit();
           // Fertig :D
-        })
-          .end(message.toString());
+        }).end(message.toString());
+        res();
       });
+    });
   }
 }
