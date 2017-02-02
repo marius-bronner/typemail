@@ -1,6 +1,6 @@
 {
   "name": "typemail",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "You've got mail! -- ok, actually you SENT the mail, so I guess some other person has got mail!",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
