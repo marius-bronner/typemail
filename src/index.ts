@@ -32,9 +32,8 @@ export class MailClient {
       .on('ready', function () {
         this.on('end', function () {
           client.quit();
-          // Fertig :D
+          res();
         }).end(message.toString());
-        res();
       });
     });
   }
